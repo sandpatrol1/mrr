@@ -4,10 +4,10 @@ import fetcher from '../utilities/fetcher';
 // /.netlify/functions/hello
 
 const useFetchWindData = (location) => {
-	const {data, error} = useSWR(`https://jsonplaceholder.typicode.com/users/1`, fetcher);
+	const {data, error} = useSWR(`/.netlify/functions/weather`, fetcher);
 
 	return {
-		user: data,
+		weather: data,
 		isLoading: !error && !data,
 		isError: error
 	};

@@ -8,7 +8,7 @@ exports.handler = async function(event, context, callback) {
 
 	console.log('hei there');
 
-	let url = `https://api.openweathermap.org/data/2.5/weather?q=copenhagen&appid=bc014614ade2a6685e6c5b904442bd6f`;
+	let url = `https://api.openweathermap.org/data/2.5/weather?q=copenhagen&units=metric&appid=bc014614ade2a6685e6c5b904442bd6f`;
 	const config = {
 		url: url
 	};
