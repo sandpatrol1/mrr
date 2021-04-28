@@ -4,34 +4,28 @@ const axios = require('axios');
 exports.handler = async function(event, context, callback) {
 	// your server-side functionality
 
-	const API_KEY = 'bc014614ade2a6685e6c5b904442bd6f';
+	// const API_KEY = 'bc014614ade2a6685e6c5b904442bd6f';
 
 	console.log('hei there');
 
-	let url = `https://api.openweathermap.org/data/2.5/weather?q=copenhagen&appid=${API_KEY}`;
+	let url = `https://api.openweathermap.org/data/2.5/weather?q=copenhagen&appid=bc014614ade2a6685e6c5b904442bd6f`;
 	const config = {
-		method: 'get',
-		url: url,
-		headers: {
-			'Content-Type': 'application/json'
-		}
+		url: url
 	};
 
-	axios(config)
+	return axios(config)
 		.then((json) => {
-			response = {
+			console.log(json.data);
+			callback(null, {
 				statusCode: 200,
-				body: json.data
-			};
-			console.log(response);
-			callback(null, response);
+				body: JSON.stringify(json.data)
+			});
 		})
-		.catch((err) => {
-			console.log(err);
-			response = {
+		.catch((error) => {
+			console.log(error);
+			callback(null, {
 				statusCode: 400,
-				body: err.data
-			};
-			callback(null, response);
+				body: 'Access Denied'
+			});
 		});
 };
