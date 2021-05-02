@@ -28,7 +28,7 @@ export default function Home() {
 				<Wind />
 			</main>
 
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }
