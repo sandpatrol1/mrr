@@ -1,13 +1,13 @@
 body {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
+	background: linear-gradient(to right, #ffb75e, #ed8f03);
 	padding: 0;
 	margin: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: linear-gradient(to right, #9cecfb, #65c7f7, #0052d4);
+	color: #fff;
+	font-family: 'Orelega One', cursive;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -15,18 +15,23 @@ body {
 }
 
 main {
-	padding: 5rem 0;
+	padding: 3rem 0;
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 
 .container {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
+	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.landingImage {
+	z-index: 10;
+	height: 500px;
 }

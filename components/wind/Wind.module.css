@@ -1,34 +1,36 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border-radius: 30px;
 	width: 350px;
-	height: 350px;
+	z-index: 100;
 }
 
-.location {
+.container p {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.wrapper {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-content: center;
 	align-items: center;
 }
 
-.wind {
+.forecast {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+}
+.forecast p {
+	font-size: 2.8em;
 }
 
-.con {
+.information {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 350px;
-	height: 350px;
-	background: white;
-	border-radius: 30px;
+}
+
+.icon {
+	width: 70px;
 }
