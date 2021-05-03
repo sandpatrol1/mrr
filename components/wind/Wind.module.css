@@ -10,6 +10,35 @@
 	font-size: 1.2em;
 }
 
+.searchform {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+}
+
+.searchform input {
+	width: 250px;
+	height: 40px;
+	font-size: 1.5em;
+	margin-bottom: 30px;
+	background-color: transparent;
+	border: solid 2px #fff;
+	border-radius: 5px;
+	color: #fff;
+}
+
+.searchform button {
+	width: 150px;
+	height: 40px;
+	margin-bottom: 30px;
+	border-radius: 50px;
+	border: solid 2px #fff;
+	background-color: transparent;
+	font-size: 1.5em;
+	color: #fff;
+}
+
 .wrapper {
 	display: flex;
 	flex-direction: row;
