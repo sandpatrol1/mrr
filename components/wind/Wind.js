@@ -22,7 +22,8 @@ const Wind = () => {
 					<div className={styles.information}>
 						<img
 							className={styles.icon}
-							src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+							// src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+							src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
 							alt="Weather icon"
 						/>
 						<p className={styles.location}>{weather.name}</p>
