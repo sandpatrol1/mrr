@@ -2,4 +2,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 50px;
+	margin: auto;
+	height: 20vh;
+	width: 20vh;
+	background-image: linear-gradient(to bottom, #ff9999, #ff5b5b), linear-gradient(to bottom, #e5b1ff, #e5b1ff);
 }

@@ -18,7 +18,7 @@ export default function Home() {
 			<Image
 				// loader={myLoader}
 				src="/rain-drops-illuminated-on-window.jpg"
-				alt="/rain-drops-illuminated-on-window.jpg"
+				alt="raindrops"
 				layout="fill"
 				objectFit="cover"
 				objectPosition="center"

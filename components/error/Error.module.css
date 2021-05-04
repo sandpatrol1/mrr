@@ -2,4 +2,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+}
+
+.error p {
+	margin-bottom: 30px;
+}
+
+.errorImage {
+	border-radius: 20px;
+	opacity: 70%;
 }
