@@ -2,13 +2,18 @@ import {motion} from 'framer-motion';
 import styles from './Spinner.module.css';
 
 const Spinner = () => {
-	return (
-		<motion.div
-			className={styles.spinner}
-			animate={{x: [ 0, 100, 0, -100, 0 ], rotate: 360}}
-			transition={{duration: 3, loop: Infinity, ease: 'linear'}}
-		/>
-	);
+	const spinTransition = {
+		rotate: {
+			loop: Infinity,
+			ease: 'linear',
+			duration: 1
+		},
+		scale: {
+			duration: 0.5
+		}
+	};
+
+	return <motion.div className={styles.spinner} animate={{rotate: 360}} transition={spinTransition} />;
 };
 
 export default Spinner;
