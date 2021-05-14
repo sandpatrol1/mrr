@@ -1,10 +1,10 @@
 import styles from './LocationSelect.module.css';
 
-const LocationSelect = () => {
+const LocationSelect = ({value}) => {
 	return (
 		<form>
-			<input type="text" />
-			<button type="submit">Submitt</button>
+			<input type="text" value={value} />
+			<button type="submit">Submit</button>
 		</form>
 	);
 };
