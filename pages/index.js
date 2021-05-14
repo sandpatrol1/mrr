@@ -15,14 +15,14 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
-			<Image
+			{/* <Image
 				// loader={myLoader}
 				src="/rain-drops-illuminated-on-window.jpg"
 				alt="raindrops"
 				layout="fill"
 				objectFit="cover"
 				objectPosition="center"
-			/>
+			/> */}
 
 			<main>
 				<Wind />
