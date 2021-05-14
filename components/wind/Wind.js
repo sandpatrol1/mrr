@@ -1,5 +1,6 @@
 import {motion} from 'framer-motion';
 import {useState} from 'react';
+// import {Button} from '@sandpatrol1/sandpatrol1.ui.button';
 import styles from './Wind.module.css';
 import useFetchWindData from '../../hooks/useFetchWindData';
 import Spinner from '../spinner/Spinner';
