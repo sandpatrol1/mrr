@@ -5,13 +5,13 @@ const Error = () => {
 	return (
 		<div className={styles.error}>
 			<p>Could not be found - please type again</p>
-			<Image
+			{/* <Image
 				className={styles.errorImage}
 				src="/typewriter-close-up.jpg"
 				alt="Typewriter"
 				width={350}
 				height={350}
-			/>
+			/> */}
 		</div>
 	);
 };
