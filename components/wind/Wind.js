@@ -4,7 +4,7 @@ import styles from './Wind.module.css';
 import useFetchWindData from '../../hooks/useFetchWindData';
 import Spinner from '../spinner/Spinner';
 import Error from '../error/Error';
-import SearchForm from '../searchform/SearchForm';
+import SearchForm from '../searchForm/SearchForm';
 
 const Wind = () => {
 	const [ state, setState ] = useState('Copenhagen');
