@@ -24,7 +24,7 @@ exports.handler = async function(event, context, callback) {
 			console.log(error);
 			callback(null, {
 				statusCode: 400,
-				body: 'Access Denied'
+				body: 'Bad Request'
 			});
 		});
 };

@@ -4,7 +4,7 @@ import styles from './Spinner.module.css';
 const Spinner = () => {
 	const spinTransition = {
 		rotate: {
-			loop: Infinity,
+			repeat: Infinity,
 			ease: 'linear',
 			duration: 1
 		},

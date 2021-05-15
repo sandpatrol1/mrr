@@ -1,8 +1,6 @@
 import useSWR from 'swr';
 import fetcher from '../utilities/fetcher';
 
-// /.netlify/functions/hello
-
 const useFetchWindData = (location) => {
 	const {data, error} = useSWR(`/.netlify/functions/weather?location=${location}`, fetcher);
 

@@ -4,7 +4,7 @@ import styles from './Wind.module.css';
 import useFetchWindData from '../../hooks/useFetchWindData';
 import Spinner from '../spinner/Spinner';
 import Error from '../error/Error';
-import LocationSelect from '../locationSelect/LocationSelect';
+import SearchForm from '../searchform/SearchForm';
 
 const Wind = () => {
 	const [ state, setState ] = useState('Copenhagen');
@@ -21,10 +21,7 @@ const Wind = () => {
 	};
 	return (
 		<div className={styles.container}>
-			<form onSubmit={handleSubmit} className={styles.searchform}>
-				<input type="text" value={state} onChange={changeHandler} />
-				<button type="submit">Search</button>
-			</form>
+			<SearchForm handleSubmit={handleSubmit} changeHandler={changeHandler} value={state} />
 			{isLoading ? (
 				<Spinner />
 			) : isError ? (
