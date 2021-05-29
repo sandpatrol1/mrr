@@ -7,7 +7,10 @@ function Mrr() {
 	return (
 		<MrrContext.Provider
 			value={{
-				mrrData: {}
+				mrrData: {
+					savings: [ 0, 8, 9, 9, 10 ],
+					growth: [ 1, 3, 9, 9, 11 ]
+				}
 			}}
 		>
 			<div className={styles.Mrr}>

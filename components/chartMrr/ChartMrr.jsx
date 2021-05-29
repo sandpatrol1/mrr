@@ -4,15 +4,24 @@ import styles from './ChartMrr.module.css';
 import MrrContext from '../mrr/MrrContext';
 
 function ChartMrr() {
+	const mrrContext = useContext(MrrContext);
+
 	const data = {
 		labels: [ '1', '2', '3', '4', '5', '6' ],
 		datasets: [
 			{
 				label: '# of Votes',
-				data: [ 12, 19, 3, 5, 2, 3 ],
+				data: mrrContext.mrrData.savings,
 				fill: false,
 				backgroundColor: 'rgb(255, 99, 132)',
 				borderColor: 'rgba(255, 99, 132, 0.2)'
+			},
+			{
+				label: 'Second',
+				data: mrrContext.mrrData.growth,
+				fill: false,
+				backgroundColor: 'rgb(255, 99, 132)',
+				borderColor: 'rgb(203, 239, 141)'
 			}
 		]
 	};
@@ -31,7 +40,7 @@ function ChartMrr() {
 
 	return (
 		<div>
-			<Line data={data} options={options} />
+			<Line data={data} options={options} width={400} height={200} />
 		</div>
 	);
 }
