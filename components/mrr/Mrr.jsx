@@ -1,6 +1,7 @@
 import MrrContext from './MrrContext';
 import styles from './Mrr.module.css';
 import FormMrr from '../formMrr/FormMrr';
+import ChartMrr from '../chartMrr/ChartMrr';
 
 function Mrr() {
 	return (
@@ -11,7 +12,7 @@ function Mrr() {
 		>
 			<div className={styles.Mrr}>
 				<FormMrr />
-				<div>Charts</div>
+				<ChartMrr />
 			</div>
 		</MrrContext.Provider>
 	);
