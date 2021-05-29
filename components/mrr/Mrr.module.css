@@ -1,0 +1,7 @@
+.Mrr {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	column-gap: 10px;
+	row-gap: 15px;
+	justify-items: start;
+}
