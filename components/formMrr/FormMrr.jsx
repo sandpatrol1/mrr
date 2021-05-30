@@ -1,6 +1,7 @@
 import {useState, useContext} from 'react';
 import styles from './FormMrr.module.css';
 import MrrContext from '../mrr/MrrContext';
+import mrrData from '../../utilities/mrrData';
 import Input from '../UI/input/Input';
 import Button from '../UI/button/Button';
 
@@ -14,14 +15,22 @@ function FormMrr() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		mrrContext.mrrData = state;
-		console.log(mrrContext.mrrData);
+		const data = mrrData(state);
+		mrrContext.mrrData = data;
+		console.log('form', mrrContext.mrrData);
 	};
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<Input name="growth" placeholder="Monthly Growth" type="number" onChange={handleChange} />
-			<Input name="savings" placeholder="Savings" type="number" onChange={handleChange} />
+			<Input name="savingsTotal" placeholder="Savings" type="number" onChange={handleChange} />
+			<Input name="growthMonth" placeholder="Monthly Growth" type="number" onChange={handleChange} />
+			<Input name="expensesMonth" placeholder="Monthly Expenses" type="number" onChange={handleChange} />
+			<Input
+				name="surrenderTresholdTotal"
+				placeholder="Surrender Treshold"
+				type="number"
+				onChange={handleChange}
+			/>
 			<Button text="Update MRR" color="Green" />
 		</form>
 	);
