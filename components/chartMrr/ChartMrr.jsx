@@ -6,17 +6,8 @@ import MrrContext from '../mrr/MrrContext';
 function ChartMrr() {
 	const mrrContext = useContext(MrrContext);
 
-	//     mrrData: {
-	//     savings: [],
-	//     expencesMth: [],
-	//     growthMth: [],
-	//     surrenderTreshold: []
-	// }
-
-	console.log('chart', mrrContext.mrData);
-
 	const data = {
-		labels: [ '1', '2', '3', '4', '5', '6' ],
+		labels: mrrContext.mrrData.mths,
 		datasets: [
 			{
 				label: 'Savings',
@@ -44,12 +35,14 @@ function ChartMrr() {
 					}
 				}
 			]
-		}
+		},
+		responsive: true,
+		maintainAspectRatio: true
 	};
 
 	return (
 		<div>
-			<Line data={data} options={options} width={400} height={200} />
+			<Line data={data} options={options} width={700} height={600} />
 		</div>
 	);
 }

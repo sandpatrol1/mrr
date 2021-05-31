@@ -1,13 +1,13 @@
 import {useState, useContext} from 'react';
 import styles from './FormMrr.module.css';
 import MrrContext from '../mrr/MrrContext';
-import mrrData from '../../utilities/mrrData';
+import mrrDataHandler from '../../utilities/mrrDataHandler';
 import Input from '../UI/input/Input';
 import Button from '../UI/button/Button';
 
 function FormMrr() {
 	const [ state, setState ] = useState({});
-	const mrrContext = useContext(MrrContext);
+	const {mrrData, updateMrrData} = useContext(MrrContext);
 
 	const handleChange = (event) => {
 		setState({...state, [event.target.name]: event.target.value});
@@ -15,9 +15,8 @@ function FormMrr() {
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const data = mrrData(state);
-		mrrContext.mrrData = data;
-		console.log('form', mrrContext.mrrData);
+		const data = mrrDataHandler(state);
+		updateMrrData(data);
 	};
 
 	return (

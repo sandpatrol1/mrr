@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Layout from '../components/UI/layout/Layout';
-import Header from '../components/UI/header/Header';
 import Mrr from '../components/mrr/Mrr';
 
 export default function Home() {
@@ -17,10 +15,7 @@ export default function Home() {
 			</Head>
 
 			<main>
-				<Layout>
-					<Header title="Monthly Recurring Revenue Calculator" />
-					<Mrr />
-				</Layout>
+				<Mrr />
 			</main>
 		</div>
 	);

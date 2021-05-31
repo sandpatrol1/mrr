@@ -1,46 +1,34 @@
-function mrrData({savingsTotal, growthMonth, expensesMonth, surrenderTresholdTotal}) {
+function mrrDataHandler({savingsTotal, growthMonth, expensesMonth, surrenderTresholdTotal}) {
 	const mrrData = {
 		savings: [],
 		expencesMth: [],
 		growthMth: [],
-		surrenderTreshold: []
+		surrenderTreshold: [],
+		mths: []
 	};
 
 	let savingsMth = parseFloat(savingsTotal);
 	let expensesMth = parseFloat(expensesMonth);
 	let growthMth = parseFloat(growthMonth);
 	let surrenderTreshold = parseFloat(surrenderTresholdTotal) * expensesMonth;
-
-	console.log(savingsMth, growthMth, expensesMth, surrenderTreshold);
+	let mth = 1;
 
 	mrrData.savings.push(savingsMth);
 	mrrData.expencesMth.push(expensesMth);
 	mrrData.growthMth.push(growthMth);
 	mrrData.surrenderTreshold.push(surrenderTreshold);
+	mrrData.mths.push(mth);
 
 	for (let i = 0; i < 95; i++) {
-		savingsMth = savingsMth + growthMth - expensesMth;
+		mrrData.growthMth.push(mrrData.growthMth[mrrData.growthMth.length - 1] + growthMth);
+		savingsMth = savingsMth + mrrData.growthMth[i] - expensesMth;
 		mrrData.savings.push(savingsMth);
 		mrrData.expencesMth.push(expensesMth);
-		mrrData.growthMth.push(growthMth);
 		mrrData.surrenderTreshold.push(surrenderTreshold);
+		mrrData.mths.push(mth++);
 	}
-	console.log(mrrData);
+	console.log('mrrData finished', mrrData);
 	return mrrData;
 }
 
-export default mrrData;
-
-// const data = {
-// 	savings: 100000,
-// 	growthMth: 1000,
-// 	expensesMth: 10000,
-// 	surrenderTreshold: 3
-// };
-
-// mrrData: {
-//     savings: [],
-//     expencesMth: [],
-//     growthMth: [],
-//     surrenderTreshold: []
-// }
+export default mrrDataHandler;

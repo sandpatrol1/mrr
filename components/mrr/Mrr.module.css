@@ -1,7 +1,33 @@
+.MrrH1 {
+	display: grid;
+	grid-template-columns: 100%;
+	column-gap: 10px;
+	row-gap: 15px;
+	justify-items: start;
+	justify-content: center;
+	width: 950px;
+	margin: 0 auto;
+}
+
 .Mrr {
 	display: grid;
 	grid-template-columns: 20% 80%;
 	column-gap: 10px;
 	row-gap: 15px;
 	justify-items: start;
+	justify-content: center;
+	width: 950px;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+	.Mrr {
+		grid-template-columns: 100%;
+		justify-items: center;
+		width: 100%;
+	}
+	.MrrH1 {
+		justify-items: center;
+		width: 100%;
+	}
 }
