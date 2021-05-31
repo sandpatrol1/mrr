@@ -1,13 +1,11 @@
-import Image from 'next/image';
 import Head from 'next/head';
-import Wind from '@components/wind/Wind';
-import Footer from '@components/footer/Footer';
+import Mrr from '../components/mrr/Mrr';
 
 export default function Home() {
 	return (
 		<div className="container">
 			<Head>
-				<title>Just Windy!</title>
+				<title>MRR</title>
 				<link rel="icon" href="/favicon.ico" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
 				<link
@@ -15,20 +13,10 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
-			{/* <Image
-				// loader={myLoader}
-				src="/rain-drops-illuminated-on-window.jpg"
-				alt="raindrops"
-				layout="fill"
-				objectFit="cover"
-				objectPosition="center"
-			/> */}
 
 			<main>
-				<Wind />
+				<Mrr />
 			</main>
-
-			<Footer />
 		</div>
 	);
 }

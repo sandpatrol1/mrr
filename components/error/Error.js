@@ -4,7 +4,7 @@ import styles from './Error.module.css';
 const Error = () => {
 	return (
 		<div className={styles.error}>
-			<p>Could not be found - please type again</p>
+			<p>Error...</p>
 			{/* <Image
 				className={styles.errorImage}
 				src="/typewriter-close-up.jpg"

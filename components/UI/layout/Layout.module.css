@@ -1,0 +1,12 @@
+.Container {
+	display: flex;
+	flex-direction: column;
+	width: 950px;
+	/* margin: 0 auto; */
+}
+
+@media only screen and (max-width: 1024px) {
+	.Container {
+		justify-content: center;
+	}
+}
