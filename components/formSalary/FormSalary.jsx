@@ -1,5 +1,5 @@
 import {useState, useContext} from 'react';
-import styles from './formSalary.module.css';
+import styles from './FormSalary.module.css';
 import MrrContext from '../mrr/MrrContext';
 import {salaryHandler} from '../../utilities/mrrDataHandler';
 import Input from '../UI/input/Input';
