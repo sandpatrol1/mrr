@@ -1,17 +1,26 @@
 import {useState, useContext} from 'react';
 import {Line} from 'react-chartjs-2';
-import styles from './ChartMrr.module.css';
+import styles from './ChartSalary.module.css';
 import MrrContext from '../mrr/MrrContext';
 
-function ChartMrr() {
+function ChartSalary() {
 	const mrrContext = useContext(MrrContext);
 
+	// const [ salaryData, setSalaryData ] = useState({
+	// 	savingsTotal: [],
+	// 	expensesMth: [],
+	// 	salaryMth: [],
+	// 	salaryIncrease: [],
+	// 	savingsMth: [],
+	// 	mths: []
+	// });
+
 	const data = {
-		labels: mrrContext.mrrData.mths,
+		labels: mrrContext.salaryData.mths,
 		datasets: [
 			{
 				label: 'Savings',
-				data: mrrContext.mrrData.savings,
+				data: mrrContext.salaryData.savingsTotal,
 				fill: false,
 				lineTension: 0.1,
 				backgroundColor: 'rgba(75,192,192,0.4)',
@@ -31,8 +40,8 @@ function ChartMrr() {
 				pointHitRadius: 10
 			},
 			{
-				label: 'Surrender',
-				data: mrrContext.mrrData.surrenderTreshold,
+				label: 'Expenses',
+				data: mrrContext.salaryData.expensesMth,
 				fill: false,
 				lineTension: 0.1,
 				backgroundColor: 'rgba(255,99,132,0.2)',
@@ -76,4 +85,4 @@ function ChartMrr() {
 	);
 }
 
-export default ChartMrr;
+export default ChartSalary;

@@ -31,4 +31,53 @@ function mrrDataHandler({savingsTotal, growthMonth, expensesMonth, surrenderTres
 	return mrrData;
 }
 
-export default mrrDataHandler;
+function salaryHandler({savingsTotal, expensesMth, salaryMth, salaryIncrease, savingsMth}) {
+	const salaryData = {
+		savingsTotal: [],
+		expensesMth: [],
+		salaryMth: [],
+		salaryIncrease: [],
+		savingsMth: [],
+		mths: []
+	};
+
+	let savings = parseFloat(savingsTotal);
+	let expensesMonth = parseFloat(expensesMth);
+	let salaryMonth = parseFloat(salaryMth);
+	let salaryIncreaseMonth = parseFloat(salaryIncrease);
+	let savingsMonth = parseFloat(savingsMth);
+	let mth = 1;
+
+	salaryData.savingsTotal.push(savings);
+	salaryData.expensesMth.push(expensesMonth);
+	salaryData.salaryMth.push(salaryMonth);
+	salaryData.salaryIncrease.push(salaryIncreaseMonth);
+	salaryData.savingsMth.push(savingsMonth);
+	salaryData.mths.push(mth);
+
+	for (let i = 0; i < 95; i++) {
+		salaryMonth = salaryData.salaryMth[i] + salaryIncreaseMonth;
+		salaryData.salaryMth.push(salaryMonth);
+
+		salaryData.savingsTotal.push(salaryData.savingsTotal[i] + savingsMonth);
+
+		salaryData.salaryIncrease.push(salaryIncreaseMonth);
+		salaryData.expensesMth.push(expensesMonth);
+
+		salaryData.savingsMth.push(savingsMonth);
+		salaryData.mths.push(mth++);
+	}
+	console.log('salaryData', salaryData);
+	return salaryData;
+}
+
+export {mrrDataHandler, salaryHandler};
+
+// const [ salaryData, setSalaryData ] = useState({
+// 	savings: [],
+// 	expencesMth: [],
+// 	salaryMth: [],
+// 	salaryIncrease: [],
+// 	savingsPercentageMth: [],
+// 	mths: []
+// });
