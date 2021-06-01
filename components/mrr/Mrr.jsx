@@ -36,7 +36,11 @@ function Mrr() {
 	return (
 		<MrrContext.Provider value={{mrrData, updateMrrData, salaryData, updateSalaryData}}>
 			<div className={styles.MrrH1}>
-				<Header title="Monthly Recurring Revenue Calculator" />
+				<Header title="MRR and Salary Calculator" />
+				<p>
+					Calculate personal savings based on assumptions for MRR going independent versus working in a
+					salaried job.
+				</p>
 			</div>
 			<div className={styles.Mrr}>
 				<FormMrr />
