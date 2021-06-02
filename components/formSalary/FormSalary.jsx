@@ -21,11 +21,11 @@ function FormSalary() {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<Input name="savingsTotal" placeholder="Savings" type="number" onChange={handleChange} />
-			<Input name="salaryMth" placeholder="Monthly Salary" type="number" onChange={handleChange} />
-			<Input name="expensesMth" placeholder="Monthly Expenses" type="number" onChange={handleChange} />
-			<Input name="salaryIncrease" placeholder="Salary Increase Monthly" type="number" onChange={handleChange} />
-			<Input name="savingsMth" placeholder="Savings Monthly" type="number" onChange={handleChange} />
+			<Input name="savingsTotal" placeholder="Savings Total" type="number" onChange={handleChange} />
+			<Input name="salaryMth" placeholder="Salary Mth" type="number" onChange={handleChange} />
+			<Input name="expensesMth" placeholder="Expenses Mth" type="number" onChange={handleChange} />
+			<Input name="salaryIncrease" placeholder="Salary Increase Mth" type="number" onChange={handleChange} />
+			<Input name="savingsMth" placeholder="Savings Mth" type="number" onChange={handleChange} />
 			<Button text="Update Salary" color="Green" />
 		</form>
 	);

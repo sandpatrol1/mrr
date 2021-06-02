@@ -6,15 +6,6 @@ import MrrContext from '../mrr/MrrContext';
 function ChartSalary() {
 	const mrrContext = useContext(MrrContext);
 
-	// const [ salaryData, setSalaryData ] = useState({
-	// 	savingsTotal: [],
-	// 	expensesMth: [],
-	// 	salaryMth: [],
-	// 	salaryIncrease: [],
-	// 	savingsMth: [],
-	// 	mths: []
-	// });
-
 	const data = {
 		labels: mrrContext.salaryData.mths,
 		datasets: [
@@ -64,6 +55,10 @@ function ChartSalary() {
 	};
 
 	const options = {
+		title: {
+			display: true,
+			text: 'Predicted world population (millions) in 2050'
+		},
 		scales: {
 			yAxes: [
 				{
@@ -80,7 +75,7 @@ function ChartSalary() {
 
 	return (
 		<div className={styles.ChartWrapper}>
-			<Line data={data} options={options} />
+			<Line data={data} config={options} />
 		</div>
 	);
 }

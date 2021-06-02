@@ -1,12 +1,15 @@
 .MrrH1 {
 	display: grid;
-	grid-template-columns: 100%;
+	grid-template-columns: 1fr;
 	column-gap: 10px;
 	row-gap: 15px;
 	justify-items: start;
 	justify-content: center;
-	width: 100%;
 	margin: 0 auto;
+}
+
+.MrrH1 h2 {
+	margin: 10px 0 10px 0;
 }
 
 .Mrr {
@@ -16,18 +19,11 @@
 	row-gap: 15px;
 	justify-items: start;
 	justify-content: center;
-	width: 100%;
 	margin: 0 auto;
 }
 
 @media only screen and (max-width: 1024px) {
 	.Mrr {
 		grid-template-columns: 100%;
-		justify-items: center;
-		width: 100%;
-	}
-	.MrrH1 {
-		justify-items: center;
-		width: 100%;
 	}
 }
