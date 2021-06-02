@@ -21,12 +21,12 @@ function FormMrr() {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<Input name="savingsTotal" placeholder="Savings" type="number" onChange={handleChange} />
-			<Input name="growthMonth" placeholder="Monthly Growth" type="number" onChange={handleChange} />
-			<Input name="expensesMonth" placeholder="Monthly Expenses" type="number" onChange={handleChange} />
+			<Input name="savingsTotal" placeholder="Savings Total" type="number" onChange={handleChange} />
+			<Input name="growthMonth" placeholder="Growth Mth" type="number" onChange={handleChange} />
+			<Input name="expensesMonth" placeholder="Expenses Mth" type="number" onChange={handleChange} />
 			<Input
 				name="surrenderTresholdTotal"
-				placeholder="Surrender Treshold"
+				placeholder="Surrender Treshold Mths"
 				type="number"
 				onChange={handleChange}
 			/>
