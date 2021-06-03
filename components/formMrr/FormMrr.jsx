@@ -20,7 +20,7 @@ function FormMrr() {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className={styles.Form}>
 			<Input name="savingsTotal" placeholder="Savings Total" type="number" onChange={handleChange} />
 			<Input name="growthMonth" placeholder="Growth Mth" type="number" onChange={handleChange} />
 			<Input name="expensesMonth" placeholder="Expenses Mth" type="number" onChange={handleChange} />
