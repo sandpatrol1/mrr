@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Mrr from '../components/mrr/Mrr';
+import Header from '../components/UI/header/Header';
 
 export default function Home() {
 	return (
@@ -13,6 +14,10 @@ export default function Home() {
 					rel="stylesheet"
 				/>
 			</Head>
+
+			<header>
+				<Header title="MRR vs. Salary Savings Calculator" />
+			</header>
 
 			<main>
 				<Mrr />

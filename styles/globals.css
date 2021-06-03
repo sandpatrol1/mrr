@@ -10,7 +10,9 @@ body {
 	box-sizing: border-box;
 }
 
-main {
+main,
+header,
+footer {
 	margin: 0 10px 0 10px;
 }
 

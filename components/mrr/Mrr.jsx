@@ -1,7 +1,6 @@
 import {useState} from 'react';
 import MrrContext from './MrrContext';
 import styles from './Mrr.module.css';
-import Header from '../UI/header/Header';
 import FormMrr from '../formMrr/FormMrr';
 import ChartMrr from '../chartMrr/ChartMrr';
 import FormSalary from '../formSalary/FormSalary';
@@ -36,10 +35,21 @@ function Mrr() {
 	return (
 		<MrrContext.Provider value={{mrrData, updateMrrData, salaryData, updateSalaryData}}>
 			<div className={styles.MrrH1}>
-				<Header title="MRR vs. Salary Savings Calculator" />
 				<p>
-					Calculate personal savings based on assumptions for MRR going independent versus working in a
-					salaried job.
+					<strong>
+						Calculate personal savings based on assumptions for MRR (monthly recurring revenue) going
+						independent versus working in a salaried job.
+					</strong>
+					<br />
+					<br />
+					The concept of this app comes from the Excel spreadsheet{' '}
+					<a href="https://github.com/dvassallo/bootstrapping-calculator" target="blank">
+						The Bootstrapping Calculator
+					</a>{' '}
+					by Daniel Vassallo used to inform the decision if bootstrapping his business could be successful.
+					<br />
+					<br />
+					This app has an additional chart visualizing future savings working on a regular salary.
 				</p>
 			</div>
 			<div className={styles.MrrH1}>

@@ -55,15 +55,12 @@ function ChartSalary() {
 	};
 
 	const options = {
-		title: {
-			display: true,
-			text: 'Predicted world population (millions) in 2050'
-		},
 		scales: {
 			yAxes: [
 				{
 					ticks: {
-						beginAtZero: true
+						beginAtZero: true,
+						min: 0
 					}
 				}
 			]

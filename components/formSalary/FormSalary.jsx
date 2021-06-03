@@ -20,7 +20,7 @@ function FormSalary() {
 	};
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form onSubmit={handleSubmit} className={styles.Form}>
 			<Input name="savingsTotal" placeholder="Savings Total" type="number" onChange={handleChange} />
 			<Input name="salaryMth" placeholder="Salary Mth" type="number" onChange={handleChange} />
 			<Input name="expensesMth" placeholder="Expenses Mth" type="number" onChange={handleChange} />

@@ -72,12 +72,3 @@ function salaryHandler({savingsTotal, expensesMth, salaryMth, salaryIncrease, sa
 }
 
 export {mrrDataHandler, salaryHandler};
-
-// const [ salaryData, setSalaryData ] = useState({
-// 	savings: [],
-// 	expencesMth: [],
-// 	salaryMth: [],
-// 	salaryIncrease: [],
-// 	savingsPercentageMth: [],
-// 	mths: []
-// });
