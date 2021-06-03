@@ -47,9 +47,17 @@ function Mrr() {
 						The Bootstrapping Calculator
 					</a>{' '}
 					by Daniel Vassallo used to inform the decision if bootstrapping his business could be successful.
-					<br />
-					<br />
 					This app has an additional chart visualizing future savings working on a regular salary.
+					<br />
+					<br />
+					The app does not pretend to be a budgeting tool, but only visualizes impact of different assumptions
+					on income and savings.
+					<br />
+					<br />
+					Made with &#128154;&nbsp; & JavaScript in {' '}
+					<a href="https://micheljorgensen.com/" target="blank">
+						Copenhagen
+					</a>
 				</p>
 			</div>
 			<div className={styles.MrrH1}>
