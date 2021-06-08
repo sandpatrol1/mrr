@@ -26,7 +26,7 @@ function FormMrr() {
 			<Input name="expensesMonth" placeholder="Expenses Mth" type="number" onChange={handleChange} />
 			<Input
 				name="surrenderTresholdTotal"
-				placeholder="Surrender Treshold Mths"
+				placeholder="Surrender Treshold Mths (mths of expenses)"
 				type="number"
 				onChange={handleChange}
 			/>
