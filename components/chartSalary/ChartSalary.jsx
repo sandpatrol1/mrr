@@ -72,7 +72,7 @@ function ChartSalary() {
 
 	return (
 		<div className={styles.ChartWrapper}>
-			<Line data={data} config={options} />
+			<Line data={data} options={options} />
 		</div>
 	);
 }

@@ -54,7 +54,7 @@ function Mrr() {
 					on income and savings.
 					<br />
 					<br />
-					Made with &#128154;&nbsp; & JavaScript in {' '}
+					Made with &#128154; & JavaScript in {' '}
 					<a href="https://micheljorgensen.com/" target="blank">
 						Copenhagen
 					</a>
