@@ -65,13 +65,12 @@ function ChartMrr() {
 			]
 		},
 		responsive: true,
-		maintainAspectRatio: true,
-		aspectRatio: 2
+		maintainAspectRatio: false
 	};
 
 	return (
 		<div className={styles.ChartWrapper}>
-			<Line data={data} options={options} />
+			<Line data={data} options={options} height={500} />
 		</div>
 	);
 }
