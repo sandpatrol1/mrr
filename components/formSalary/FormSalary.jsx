@@ -20,13 +20,43 @@ function FormSalary() {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className={styles.Form}>
-			<Input name="savingsTotal" placeholder="Savings Total" type="number" onChange={handleChange} />
-			<Input name="salaryMth" placeholder="Salary Mth" type="number" onChange={handleChange} />
-			<Input name="expensesMth" placeholder="Expenses Mth" type="number" onChange={handleChange} />
-			<Input name="salaryIncrease" placeholder="Salary Increase Mth" type="number" onChange={handleChange} />
-			<Input name="savingsMth" placeholder="Savings Mth" type="number" onChange={handleChange} />
-			<Button text="Update Salary" color="Green" />
+		<form onSubmit={handleSubmit} className={styles.Form} data-cy="salary-form">
+			<Input
+				name="savingsTotal"
+				placeholder="Savings Total"
+				type="number"
+				onChange={handleChange}
+				dataCy="salary-form-savingsTotal"
+			/>
+			<Input
+				name="salaryMth"
+				placeholder="Salary Mth"
+				type="number"
+				onChange={handleChange}
+				dataCy="salary-form-salaryMth"
+			/>
+			<Input
+				name="expensesMth"
+				placeholder="Expenses Mth"
+				type="number"
+				onChange={handleChange}
+				dataCy="salary-form-expensesMth"
+			/>
+			<Input
+				name="salaryIncrease"
+				placeholder="Salary Increase Mth"
+				type="number"
+				onChange={handleChange}
+				dataCy="salary-form-salaryIncrease"
+			/>
+			<Input
+				name="savingsMth"
+				placeholder="Savings Mth"
+				type="number"
+				onChange={handleChange}
+				dataCy="salary-form-savingsMth"
+			/>
+			<Button text="Update Salary" color="Green" dataCy="salary-form-submit" />
 		</form>
 	);
 }

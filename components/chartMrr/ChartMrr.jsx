@@ -70,7 +70,7 @@ function ChartMrr() {
 
 	return (
 		<div className={styles.ChartWrapper}>
-			<Line data={data} options={options} height={500} />
+			<Line data={data} options={options} height={500} data-cy="mrr-chart" />
 		</div>
 	);
 }
