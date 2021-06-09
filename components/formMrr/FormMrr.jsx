@@ -20,17 +20,36 @@ function FormMrr() {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} className={styles.Form}>
-			<Input name="savingsTotal" placeholder="Savings Total" type="number" onChange={handleChange} />
-			<Input name="growthMonth" placeholder="Growth Mth" type="number" onChange={handleChange} />
-			<Input name="expensesMonth" placeholder="Expenses Mth" type="number" onChange={handleChange} />
+		<form onSubmit={handleSubmit} className={styles.Form} data-cy="mrr-form">
+			<Input
+				name="savingsTotal"
+				placeholder="Savings Total"
+				type="number"
+				onChange={handleChange}
+				dataCy="mrr-form-savingsTotal"
+			/>
+			<Input
+				name="growthMonth"
+				placeholder="Growth Mth"
+				type="number"
+				onChange={handleChange}
+				dataCy="mrr-form-growthMonth"
+			/>
+			<Input
+				name="expensesMonth"
+				placeholder="Expenses Mth"
+				type="number"
+				onChange={handleChange}
+				dataCy="mrr-form-expensesMonth"
+			/>
 			<Input
 				name="surrenderTresholdTotal"
 				placeholder="Surrender Treshold Mths (mths of expenses)"
 				type="number"
 				onChange={handleChange}
+				dataCy="mrr-form-surrenderTresholdTotal"
 			/>
-			<Button text="Update MRR" color="Green" />
+			<Button text="Update MRR" color="Green" dataCy="mrr-form-submit" />
 		</form>
 	);
 }
