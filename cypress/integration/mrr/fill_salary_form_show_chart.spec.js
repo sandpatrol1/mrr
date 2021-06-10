@@ -1,3 +1,4 @@
+//
 describe('Fill salary form show salary chart', () => {
 	it('can be filled', () => {
 		cy.visit('/');
