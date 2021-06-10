@@ -6,8 +6,10 @@ describe('Fill MRR form show MRR chart', () => {
 		cy.get('[data-cy="mrr-form-expensesMonth"]').should('be.visible').type(20000);
 		cy.get('[data-cy="mrr-form-surrenderTresholdTotal"]').should('be.visible').type(3);
 		cy.get('[data-cy="mrr-form-submit"]').click();
+		cy.wait(2000);
 		cy.get('[data-cy="mrr-chart"]').should('be.visible').and((chart) => {
 			expect(chart.height()).to.be.equal(500);
 		});
+		cy.get('[data-cy="mrr-chart"]').toMatchImageSnapshot();
 	});
 });

@@ -71,7 +71,7 @@ function ChartSalary() {
 
 	return (
 		<div className={styles.ChartWrapper}>
-			<Line data={data} options={options} height={500} />
+			<Line data={data} options={options} height={500} data-cy="salary-chart" />
 		</div>
 	);
 }
