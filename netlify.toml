@@ -2,5 +2,3 @@
   command = "npm run build"
   publish = "out"
   functions = "functions"
-[[plugins]]
-  package = "netlify-plugin-cypress"
