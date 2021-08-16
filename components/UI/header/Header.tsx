@@ -1,6 +1,10 @@
 import styles from './Header.module.css';
 
-function Header({title}) {
+interface TitleProperties {
+	title: string;
+}
+
+function Header({title}: TitleProperties) {
 	return <h1 style={{margin: '5px 0'}}>{title}</h1>;
 }
 

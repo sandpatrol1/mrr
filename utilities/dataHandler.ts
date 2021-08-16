@@ -1,5 +1,12 @@
-function mrrDataHandler({savingsTotal, growthMonth, expensesMonth, surrenderTresholdTotal}) {
-	const mrrData = {
+interface mrrDataHandlerProperties {
+	savingsTotal: string;
+	growthMonth: string;
+	expensesMonth: string;
+	surrenderTresholdTotal: string;
+}
+
+function mrrDataHandler({savingsTotal, growthMonth, expensesMonth, surrenderTresholdTotal}: mrrDataHandlerProperties) {
+	const mrrData: any = {
 		savings: [],
 		expencesMth: [],
 		growthMth: [],
@@ -7,11 +14,11 @@ function mrrDataHandler({savingsTotal, growthMonth, expensesMonth, surrenderTres
 		mths: []
 	};
 
-	let savingsMth = parseFloat(savingsTotal);
-	let expensesMth = parseFloat(expensesMonth);
-	let growthMth = parseFloat(growthMonth);
-	let surrenderTreshold = parseFloat(surrenderTresholdTotal) * expensesMonth;
-	let mth = 1;
+	let savingsMth: number = parseFloat(savingsTotal);
+	let expensesMth: number = parseFloat(expensesMonth);
+	let growthMth: number = parseFloat(growthMonth);
+	let surrenderTreshold: number = parseFloat(surrenderTresholdTotal) * expensesMth;
+	let mth: number = 1;
 
 	mrrData.savings.push(savingsMth);
 	mrrData.expencesMth.push(expensesMth);
@@ -31,8 +38,16 @@ function mrrDataHandler({savingsTotal, growthMonth, expensesMonth, surrenderTres
 	return mrrData;
 }
 
-function salaryHandler({savingsTotal, expensesMth, salaryMth, salaryIncrease, savingsMth}) {
-	const salaryData = {
+interface salaryHandlerProperties {
+	savingsTotal: string;
+	expensesMth: string;
+	salaryMth: string;
+	salaryIncrease: string;
+	savingsMth: string;
+}
+
+function salaryHandler({savingsTotal, expensesMth, salaryMth, salaryIncrease, savingsMth}: salaryHandlerProperties) {
+	const salaryData: any = {
 		savingsTotal: [],
 		expensesMth: [],
 		salaryMth: [],

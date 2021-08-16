@@ -1,6 +1,12 @@
 import styles from './SearchForm.module.css';
 
-const SearchForm = ({handleSubmit, changeHandler, value}) => {
+interface SearchFormProperties {
+	handleSubmit: () => void;
+	changeHandler: () => void;
+	value: string;
+}
+
+const SearchForm = ({handleSubmit, changeHandler, value}: SearchFormProperties) => {
 	return (
 		<form onSubmit={handleSubmit} className={styles.searchform}>
 			<input type="text" value={value} onChange={changeHandler} />
