@@ -1,6 +1,12 @@
 import styles from './Button.module.css';
 
-function Button({text, color, dataCy}) {
+interface ButtonProperties {
+	text: string;
+	color: string;
+	dataCy: string;
+}
+
+function Button({text, color, dataCy}: ButtonProperties) {
 	return (
 		<button className={[ styles.Button, styles[color] ].join(' ')} data-cy={dataCy}>
 			{text}

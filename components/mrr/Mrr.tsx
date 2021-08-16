@@ -24,11 +24,11 @@ function Mrr() {
 		mths: []
 	});
 
-	function updateMrrData(data) {
+	function updateMrrData(data: any) {
 		setMrrData(data);
 	}
 
-	function updateSalaryData(data) {
+	function updateSalaryData(data: any) {
 		setSalaryData(data);
 	}
 
